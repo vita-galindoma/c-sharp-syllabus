@@ -10,19 +10,12 @@ namespace Exercise2
             int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             var sum = 0;
 
-            Console.WriteLine("Please enter a min number");
-            int minNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter a max number");
-            int maxNumber = int.Parse(Console.ReadLine());
-
-            /*
-            fixme
-            for (........) {
-            ........
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                sum += myArray[i];
             }
-            */
-
-            Console.WriteLine("The sum is " + sum);
+    
+            Console.WriteLine("The sum of given array is " + sum);
             Console.ReadKey();
             }
         }
