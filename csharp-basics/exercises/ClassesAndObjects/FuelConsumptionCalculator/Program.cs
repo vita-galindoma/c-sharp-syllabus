@@ -15,26 +15,26 @@ namespace FuelConsumptionCalculator
             
             Console.WriteLine();
 
-            Car car = new Car(0);
             Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            Car car2 = new Car(0);
+            for (int i = 0; i < 2; i++)
             {
-                Console.Write("Enter first reading: ");
+                Console.Write("Car1 - Enter mileage reading: ");
                 startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car.FillUp(startKilometers, liters);
-                
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
+                Console.Write("Car1 - Enter liters reading: ");
                 liters = Convert.ToInt32(Console.ReadLine());
                 car1.FillUp(startKilometers, liters);
+                
+                Console.Write("Car2 - Enter mileage reading: ");
+                startKilometers = Convert.ToInt32(Console.ReadLine());    
+                Console.Write("Car2 - Enter liters reading: ");
+                liters = Convert.ToInt32(Console.ReadLine());
+                car2.FillUp(startKilometers, liters);
             }
 
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
+            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption().ToString("0.00") + " gasHog:" + car1.GasHog() + ", economyCar:" + car1.EconomyCar());
+            Console.WriteLine("Car2 Kilometers per liter are " + car2.CalculateConsumption().ToString("0.00") + " gasHog:" + car2.GasHog() + ", economyCar:" + car2.EconomyCar());
             Console.ReadKey();
         }
     }
-}
+}   
