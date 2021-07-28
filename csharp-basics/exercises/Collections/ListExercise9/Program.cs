@@ -19,7 +19,7 @@ namespace ListExercise9
                 "Pink"
             };
 
-            Console.WriteLine(string.Join(",", firstList));
+            Console.WriteLine(string.Join(", ", firstList));
 
             var secondList = new List<string>
             {
@@ -30,9 +30,18 @@ namespace ListExercise9
                 "Pink"
             };
 
-            Console.WriteLine(string.Join(",", secondList));
+            Console.WriteLine(string.Join(", ", secondList));
             //TODO: Write a C# program to join two lists.
-            //...
+
+            //option 1 - creating new list
+            var newList = firstList.Concat(secondList);
+            Console.WriteLine(string.Join(", ", newList));
+
+            //option 2 - adding one list to another
+            firstList.AddRange(secondList);
+            Console.WriteLine(string.Join(", ", firstList));
+            
+            Console.ReadKey();
         }
     }
 }
