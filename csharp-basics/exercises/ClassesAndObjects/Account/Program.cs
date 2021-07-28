@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Account
 {
@@ -10,17 +7,36 @@ namespace Account
     {
         private static void Main(string[] args)
         {
-            var aAccount = new Account("A account", 100.00);
+            var myFirstAccount = new Account("My first account", 100);
+            Console.WriteLine("Initial state");
+            Console.WriteLine(myFirstAccount);
+            myFirstAccount.Deposit(20);
+            Console.WriteLine("Final state");
+            Console.WriteLine(myFirstAccount);
+            Console.WriteLine();
+
+            var mattAccount = new Account("Matt's account", 1000);
+            var myAccount = new Account("My account", 0);
+            Console.WriteLine("Initial state");
+            Console.WriteLine(mattAccount);
+            Console.WriteLine(myAccount);
+            mattAccount.Withdrawal(100);
+            myAccount.Deposit(100);
+            Console.WriteLine("Final state");
+            Console.WriteLine(mattAccount);
+            Console.WriteLine(myAccount);
+            Console.WriteLine();
+            
+            var aAccount = new Account("A account", 100);
             var bAccount = new Account("B account",0);
             var cAccount = new Account("C Account", 0);
             Console.WriteLine("Initial state");
             Console.WriteLine(aAccount);
             Console.WriteLine(bAccount);
             Console.WriteLine(cAccount);
-            aAccount.Name = "GGGG";
+
             Transfer(aAccount,bAccount, 50.0);
             Transfer(bAccount,cAccount, 25.0);
-            
             Console.WriteLine("Final state");
             Console.WriteLine(aAccount);
             Console.WriteLine(bAccount);
@@ -31,7 +47,7 @@ namespace Account
 
         public static void Transfer(Account from, Account to, double howMuch)
         {
-            to.deposit(from.withdrawal(howMuch));
+            to.Deposit(from.Withdrawal(howMuch));
         }
     }
 }
