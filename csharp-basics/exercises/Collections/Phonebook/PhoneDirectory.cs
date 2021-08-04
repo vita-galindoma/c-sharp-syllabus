@@ -1,64 +1,58 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        SortedDictionary<string, string> phoneBook =
+            new SortedDictionary<string, string>();
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
-        }
 
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
-            {
-                if (_data[i].name.Equals(name)) 
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
-
-        public string GetNumber(string name) 
+        public void AddNumber (string name, string number)
         {
-            var position = Find(name);
-            if (position == -1) 
+            try
             {
-                return null;
-            } 
-            else 
+                phoneBook.Add(name, number);
+            }
+            catch (ArgumentException)
             {
-                return _data[position].number;
+                Console.WriteLine($"An entry with name {name} already exists.");
             }
         }
 
-        public void PutNumber(string name, string number) 
+        public void FindByName(string name)
         {
-            if (name == null || number == null) 
+            if (phoneBook.ContainsKey(name))
             {
-                throw new Exception("name and number cannot be null");
+                Console.WriteLine($"name: {name}, number: {phoneBook[name]}.");
             }
-
-            var i = Find(name);
-            if (i >= 0) 
+            else
             {
-                _data[i].number = number;
+                Console.WriteLine($"{name} is not found.");
             }
-            else 
-            {
-                if (_dataCount == _data.Length) 
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
+        }
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
+        public void FindByNumber(string number)
+        {
+            var key = phoneBook.Where(kvp => kvp.Value == number).Select(kvp => kvp.Key).FirstOrDefault();
+            if (phoneBook.ContainsValue(number))
+            {
+                Console.WriteLine($"This {number} belongs to {key}.");
+            }
+            else
+            { 
+                Console.WriteLine($"Number {number} is not found.");
+            }
+        }
+
+        public void GetAllPhoneBook()
+        {
+            foreach (KeyValuePair<string, string> kvp in phoneBook)
+            {
+                Console.WriteLine("Name: {0}, Number: {1}",
+                    kvp.Key, kvp.Value);
             }
         }
     }
