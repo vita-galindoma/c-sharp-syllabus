@@ -11,7 +11,7 @@ namespace Exercise3
             for (int i = 0; i < randomArray.Length; i++)
             {
                 randomArray[i] = randNum.Next(0, 50);
-                //Console.WriteLine($"{randomArray[i]} ");
+                Console.WriteLine($"{randomArray[i]} ");
             }
 
             Console.WriteLine("Which number position out of 20 random numbers (between 0 and 50) would you like to know?");
