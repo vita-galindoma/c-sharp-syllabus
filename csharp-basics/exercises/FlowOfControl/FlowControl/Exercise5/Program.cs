@@ -12,7 +12,7 @@ namespace Exercise5
 
         static void PhoneKeyPad()
         {
-            Console.WriteLine("Enter a string:");
+            Console.WriteLine("Enter text:");
             var input = Console.ReadLine().ToLower();
             char[] chars = input.ToCharArray();
             foreach (char letter in chars)

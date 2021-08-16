@@ -19,27 +19,27 @@ namespace Exercise4
                 {
                     Console.WriteLine("Monday");
                 }
-                if (input == 2)
+                else if (input == 2)
                 {
                     Console.WriteLine("Tuesday");
                 }
-                if (input == 3)
+                else if (input == 3)
                 {
                     Console.WriteLine("Wednesday");
                 }
-                if (input == 4)
+                else if (input == 4)
                 {
                     Console.WriteLine("Wednesday");
                 }
-                if (input == 5)
+                else if (input == 5)
                 {
                     Console.WriteLine("Friday");
                 }
-                if (input == 6)
+                else if (input == 6)
                 {
                     Console.WriteLine("Saturday");
                 }
-                if (input == 7)
+                else 
                 {
                     Console.WriteLine("Sunday");
                 }
