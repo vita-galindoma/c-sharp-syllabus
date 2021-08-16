@@ -42,43 +42,43 @@ namespace Histogram
                 {
                     countTo09++;
                 }
-                if (t >= 10 && t <= 19)
+                else if (t >= 10 && t <= 19)
                 {
                     countTo19++;
                 }
-                if (t >= 20 && t <= 29)
+                else if (t >= 20 && t <= 29)
                 {
                     countTo29++;
                 }
-                if (t >= 30 && t <= 39)
+                else if (t >= 30 && t <= 39)
                 {
                     countTo39++;
                 }
-                if (t >= 40 && t <= 49)
+                else if (t >= 40 && t <= 49)
                 {
                     countTo49++;
                 }
-                if (t >= 50 && t <= 59)
+                else if (t >= 50 && t <= 59)
                 {
                     countTo59++;
                 }
-                if (t >= 60 && t <= 69)
+                else if (t >= 60 && t <= 69)
                 {
                     countTo69++;
                 }
-                if (t >= 70 && t <= 79)
+                else if (t >= 70 && t <= 79)
                 {
                     countTo79++;
                 }
-                if (t >= 80 && t <= 89)
+                else if (t >= 80 && t <= 89)
                 {
                     countTo89++;
                 }
-                if (t >= 90 && t <= 99)
+                else if (t >= 90 && t <= 99)
                 {
                     countTo99++;
                 }
-                if (t == 100)
+                else
                 {
                     count100++;
                 }

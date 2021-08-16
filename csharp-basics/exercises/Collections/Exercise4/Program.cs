@@ -19,7 +19,6 @@ namespace Exercise4
             while (result.ToString().Length != 1)
             {
                 result = SumDigitSquare(result);
-                //Console.WriteLine(result);
             }
             Console.WriteLine(result == 1 ? $"{n} is happy" : $"{n} is not Happy");
 
