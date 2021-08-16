@@ -12,24 +12,24 @@ namespace ConsoleApp1
         }
 
         private readonly FuelGauge _fuelGauge;
-        private int _currentMilage;
+        private int _currentMileage;
 
         public int Report()
         {
-            return _currentMilage;
+            return _currentMileage;
         }
 
         public void Increment()
         {
             if (_fuelGauge.ReportLevel() <= 0) return;
             
-            if (_currentMilage == 1000000)
+            if (_currentMileage == 1000000)
             {
-                _currentMilage = 0;
+                _currentMileage = 0;
             }
-            _currentMilage++;
+            _currentMileage++;
             
-            if (_currentMilage % 10 == 0)
+            if (_currentMileage % 10 == 0)
             {
                 _fuelGauge.DecreaseLevel();
             }

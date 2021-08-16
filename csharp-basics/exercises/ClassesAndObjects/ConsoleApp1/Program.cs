@@ -13,8 +13,8 @@ namespace ConsoleApp1
             {
                 fuelGauge.Fill();
             }
-
             Console.WriteLine($"fuel level:{fuelGauge.ReportLevel()}");
+
             var odometer = new Odometer(fuelGauge);
             Console.WriteLine("running...");
             for (int i = 0; i < 200; i++)
