@@ -13,14 +13,7 @@ namespace Exercise2
 
         static void CheckOddEven(int number)
         {
-            if (number % 2 == 0)
-            {
-                Console.WriteLine("Even");
-            }
-            else
-            {
-                Console.WriteLine("Odd");
-            }
+            Console.WriteLine(number % 2 == 0 ? "Even" : "Odd");
             Console.WriteLine("Bye!");
         }
     }

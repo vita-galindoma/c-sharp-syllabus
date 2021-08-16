@@ -19,7 +19,9 @@ namespace Exercise8
             int baseHoursPerWeek = 40;
 
             if (hoursWorked > maxHoursPerWeek)
+            {
                 Console.WriteLine($"Error! Employee has worked {hoursWorked} hours, only 60 hours per week allowed.");
+            }
             else if (basePay < minWage)
             {
                 Console.WriteLine($"Error! The base pay ${basePay} is less than the minimum wage ($8.00 an hour).");
