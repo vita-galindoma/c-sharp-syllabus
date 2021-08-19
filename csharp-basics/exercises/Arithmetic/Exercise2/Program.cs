@@ -7,13 +7,9 @@ namespace Exercise2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number:");
-            CheckOddEven(int.Parse(Console.ReadLine()));
-        }
-
-        static void CheckOddEven(int number)
-        {
-            Console.WriteLine(number % 2 == 0 ? "Even" : "Odd");
+            var inputNumber = new Exercise2Extension(30);
+            var result = inputNumber.CheckOdd();
+            Console.WriteLine(result == true ? "Even number" : "Odd number");
             Console.WriteLine("Bye!");
         }
     }
