@@ -69,7 +69,7 @@ namespace CalculateArea
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out var radius);
             Console.WriteLine("The circle's area is "
-                              + Geometry.AreaOfCircle(radius));
+                              + Geometry.AreaOfCircle((double)radius));
         }
 
         public static void CalculateRectangleArea()
