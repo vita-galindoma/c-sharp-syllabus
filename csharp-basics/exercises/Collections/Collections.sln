@@ -39,7 +39,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListExercise10", "ListExerc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListExercise11", "ListExercise11\ListExercise11.csproj", "{88737D25-5F14-427D-AAC9-910094585997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4\Exercise4.csproj", "{D0360DC5-A639-44C1-9198-B75459B61200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise4", "Exercise4\Exercise4.csproj", "{D0360DC5-A639-44C1-9198-B75459B61200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount.Tests", "WordCount.Tests\WordCount.Tests.csproj", "{37A0DBAD-FA3B-4C8E-8B15-137B43E2A596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightPlanner.Tests", "FlightPlanner.Tests\FlightPlanner.Tests.csproj", "{1E6AD3FB-DAE2-4631-A303-4F55F9C1E283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Tests", "PhoneBook.Tests\PhoneBook.Tests.csproj", "{DEC6460D-1D97-44AB-B723-40A187BF9390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +125,18 @@ Global
 		{D0360DC5-A639-44C1-9198-B75459B61200}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0360DC5-A639-44C1-9198-B75459B61200}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0360DC5-A639-44C1-9198-B75459B61200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A0DBAD-FA3B-4C8E-8B15-137B43E2A596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A0DBAD-FA3B-4C8E-8B15-137B43E2A596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A0DBAD-FA3B-4C8E-8B15-137B43E2A596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A0DBAD-FA3B-4C8E-8B15-137B43E2A596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6AD3FB-DAE2-4631-A303-4F55F9C1E283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6AD3FB-DAE2-4631-A303-4F55F9C1E283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6AD3FB-DAE2-4631-A303-4F55F9C1E283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6AD3FB-DAE2-4631-A303-4F55F9C1E283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC6460D-1D97-44AB-B723-40A187BF9390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC6460D-1D97-44AB-B723-40A187BF9390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC6460D-1D97-44AB-B723-40A187BF9390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC6460D-1D97-44AB-B723-40A187BF9390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
