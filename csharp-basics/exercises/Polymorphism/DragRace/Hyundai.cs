@@ -1,35 +1,35 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Tesla: ICar
+    public class Hyundai : ICar
     {
         private int currentSpeed = 0;
         private string _name;
 
-        public Tesla(string name)
+        public Hyundai(string name)
         {
             _name = name;
         }
 
-        public void SpeedUp() 
+        public void SpeedUp()
         {
             currentSpeed++;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
             currentSpeed--;
         }
 
-        public int ShowCurrentSpeed() 
+        public int ShowCurrentSpeed()
         {
             return currentSpeed;
         }
 
-        public void StartEngine() 
+        public void StartEngine()
         {
-            Console.WriteLine("-- silence ---");
+            Console.WriteLine("Rrrrrrr.....");
         }
         public string GetName()
         {

@@ -1,36 +1,42 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Tesla: ICar
+    public class Cupra : ICar, IBoost
     {
         private int currentSpeed = 0;
         private string _name;
-
-        public Tesla(string name)
+        
+        public Cupra(string name)
         {
             _name = name;
         }
-
-        public void SpeedUp() 
+        
+        public void SpeedUp()
         {
             currentSpeed++;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
             currentSpeed--;
         }
 
-        public int ShowCurrentSpeed() 
+        public int ShowCurrentSpeed()
         {
             return currentSpeed;
         }
 
-        public void StartEngine() 
+        public void UseNitrousOxideEngine()
         {
-            Console.WriteLine("-- silence ---");
+            currentSpeed += 8;
         }
+
+        public void StartEngine()
+        {
+            Console.WriteLine("Rrrrrrr.....");
+        }
+
         public string GetName()
         {
             return _name;
