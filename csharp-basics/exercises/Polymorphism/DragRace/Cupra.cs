@@ -32,9 +32,9 @@ namespace DragRace
             currentSpeed += 8;
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
 
         public string GetName()
