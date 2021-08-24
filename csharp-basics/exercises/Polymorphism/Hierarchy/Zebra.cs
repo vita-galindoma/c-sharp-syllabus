@@ -4,19 +4,19 @@ using System.Text;
 
 namespace Hierarchy
 {
-    class Zebra : Mammal
+    public class Zebra : Mammal
     {
         public Zebra(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion):
             base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
             
         }
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("hhheeellloo");
+            return "hhheeellloo";
         }
 
-        public override void Eat(Food food)
+        public override string Eat(Food food)
         {
             if (food is Vegetable)
             {
@@ -24,9 +24,9 @@ namespace Hierarchy
             }
             else
             {
-                Console.WriteLine($"{AnimalType} are not eating that type of food!");
+                return ($"{AnimalType} are not eating that type of food!");
             }
-            Console.WriteLine($"{AnimalType}, [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]");
+            return ($"{AnimalType}, [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]");
         }
 
         public override string ReturnInfo()
