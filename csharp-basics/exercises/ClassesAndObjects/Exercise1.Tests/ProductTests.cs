@@ -7,8 +7,7 @@ namespace Exercise1.Tests
     public class ProductTests
     {
         private Product _target;
-
-
+        
         [TestMethod]
         public void PrintProduct_InputNewValidProd_ProductInfoExpected()
         {

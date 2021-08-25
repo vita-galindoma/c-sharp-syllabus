@@ -9,7 +9,7 @@ namespace Exercise5.Tests
         private Date _target;
 
         [TestMethod]
-        public void DisplayDate_Input_25Day_8Month__2015Year_2582015Expected()
+        public void DisplayDate_Input25Day8Month2015Year_2582015Expected()
         {
             //Arrange
             _target = new Date(25, 8, 2015);
@@ -23,28 +23,28 @@ namespace Exercise5.Tests
         }
 
         [TestMethod]
-        public void DisplayDate_Input_31Day_9Month_1990Year_ExceptionExpected()
+        public void DisplayDate_Input31Day9Month1990Year_ExceptionExpected()
         {
             //Assert
             Assert.ThrowsException<ArgumentException>(() => new Date(31, 9, 1990));
         }
 
         [TestMethod]
-        public void DisplayDate_Input_12Day_14Month_2015Year_ExceptionExpected()
+        public void DisplayDate_Input12Day14Month2015Year_ExceptionExpected()
         {
             //Assert
             Assert.ThrowsException<ArgumentException>(() => new Date(12, 14, 2015));
         }
 
         [TestMethod]
-        public void DisplayDate_Input_Neg12Day_8Month_2015Year_ExceptionExpected()
+        public void DisplayDate_InputNeg12Day8Month2015Year_ExceptionExpected()
         {
             //Assert
             Assert.ThrowsException<ArgumentException>(() => new Date(-12, 8, 2015));
         }
 
         [TestMethod]
-        public void DisplayDate_Input_45Day_5Month_2015Year_ExceptionExpected()
+        public void DisplayDate_Input45Day5Month2015Year_ExceptionExpected()
         {
             //Assert
             Assert.ThrowsException<ArgumentException>(() => new Date(45, 5, 2015));

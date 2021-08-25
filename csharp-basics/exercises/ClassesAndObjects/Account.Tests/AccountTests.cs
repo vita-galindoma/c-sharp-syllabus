@@ -37,7 +37,7 @@ namespace Account.Tests
         }
 
         [TestMethod]
-        public void Balance_InputBalance100_Depo100_Withdraw50_150Expected()
+        public void Balance_InputBalance100Depo100Withdraw50_150Expected()
         {
             //Arrange
             _target = new Account("account", 100);
