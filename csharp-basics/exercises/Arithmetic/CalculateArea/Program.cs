@@ -7,7 +7,6 @@ namespace CalculateArea
         static void Main(string[] args)
         {
             int choice;
-
             do
             {
                 choice = GetMenu();
@@ -35,13 +34,11 @@ namespace CalculateArea
                     Console.WriteLine("\nThanks for calculating!");
                     Console.ReadKey();
                 }
-
             } while (choice != 4);
         }
 
         public static int GetMenu()
         {
-
             int userChoice;
 
             Console.WriteLine("Geometry Calculator\n");
@@ -59,7 +56,6 @@ namespace CalculateArea
                 keyboard = Console.ReadKey();
                 userChoice = keyboard.KeyChar;
             }
-
             return userChoice;
         }
 
@@ -77,8 +73,7 @@ namespace CalculateArea
             Console.WriteLine("Enter length? ");
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out decimal length);
-
-
+            
             Console.WriteLine("Enter width? ");
             keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out decimal width);
@@ -89,7 +84,6 @@ namespace CalculateArea
 
         public static void CalculateTriangleArea()
         {
-
             Console.WriteLine("Enter length of the triangle's base? ");
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out decimal ground);

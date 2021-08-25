@@ -8,7 +8,6 @@ namespace Exercise6.Tests
         private Exercise6Extension _target;
 
         [TestMethod]
-
         public void CozaLozaWoza_Input22_2LinesExpected()
         {
             //Arrange

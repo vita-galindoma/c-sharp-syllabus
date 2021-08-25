@@ -11,7 +11,6 @@ namespace Exercise1.Tests
         [DataRow(9, 6, true)]
         [DataRow(18, -3, true)]
         [DataRow(18, 9, false)]
-
         public void IsFifteen_Input2Int_boolExpected(int x, int y, bool z)
         {
             //Act

@@ -9,7 +9,7 @@ namespace Exercise1
     {
         public static bool IsFifteen(int x, int y)
         {
-            return (x == 15) || (y == 15) || (x + y == 15) || Math.Abs(x + y) == 15;
+            return x == 15 || y == 15 || x + y == 15 || Math.Abs(x + y) == 15;
         }
     }
 }

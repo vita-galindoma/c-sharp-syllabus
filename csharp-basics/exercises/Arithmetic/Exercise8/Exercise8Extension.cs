@@ -45,7 +45,5 @@ namespace Exercise8
                 return $"Total salary is ${result}.";
             }
         }
-
-
     }
 }

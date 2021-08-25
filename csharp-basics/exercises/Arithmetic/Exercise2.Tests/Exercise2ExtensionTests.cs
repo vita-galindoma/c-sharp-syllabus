@@ -4,14 +4,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Exercise2.Tests
 {
     [TestClass]
-
     public class Exercise2ExtensionTests
-
     {
         private Exercise2Extension _target;
 
         [TestMethod]
-
         public void CheckOdd_Input16_TrueExpected()
         {
             //Arrange
@@ -25,7 +22,6 @@ namespace Exercise2.Tests
         }
 
         [TestMethod]
-
         public void CheckOdd_Input17_FalseExpected()
         {
             //Arrange
