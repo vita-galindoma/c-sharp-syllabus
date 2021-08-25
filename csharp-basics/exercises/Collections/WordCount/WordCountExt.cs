@@ -8,7 +8,6 @@ namespace WordCount
 {
     public class WordCountExt
     {
-
         public static int CalculateLineCount(string text)
         {
             int countLines = text.Split('\n').Length;
@@ -30,6 +29,5 @@ namespace WordCount
             int countChar = text.Length;
             return countChar;
         }
-
     }
 }

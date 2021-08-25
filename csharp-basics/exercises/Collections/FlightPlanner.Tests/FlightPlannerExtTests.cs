@@ -16,23 +16,17 @@ namespace FlightPlanner.Tests
         public void GetListOfCities_HashsetExpected()
         {
             //Arrange
-            HashSet<string> resultCities = new HashSet<string>() { "LA", "NY", "CA", "GA", "IL", "KS"};
-            var textResultCities = "";
-            foreach (var i in resultCities)
-                textResultCities += $"{i} ";
+            var inputTextUniqueCitiesCount = 6;
 
             //Act
             var resultActual = FlightPlannerExt.GetListOfCities(_inputText);
-            var textResultActual = "";
-            foreach (var i in resultActual) 
-                textResultActual += $"{i} ";
 
             //Assert
-            Assert.AreEqual(textResultCities, textResultActual);
+            Assert.AreEqual(inputTextUniqueCitiesCount, resultActual.Count);
         }
 
         [TestMethod]
-        public void GetListOfRoutes_DictionaryExpected()
+        public void GetListOfRoutes_TheSameValuesforTheKeyForBothDictionariesExpected()
         {
             //Arrange
             var routes = new Dictionary<string, string>()
@@ -44,18 +38,14 @@ namespace FlightPlanner.Tests
                 {"IL", "CA"},
                 {"KS", "NY"}
             };
-            var textResultRoutes = "";
-            foreach (var kvp in routes)
-                textResultRoutes += $"[{kvp.Key}, {kvp.Value}]";
-            
+           
             //Act
             var resultActual = FlightPlannerExt.GetListOfRoutes(_inputText);
-            var textResultActual = "";
-            foreach (var i in resultActual)
-                textResultActual += $"{i}";
 
             //Assert
-            Assert.AreEqual(textResultRoutes, textResultActual);
+            Assert.AreEqual(routes["LA"], resultActual["LA"]);
+            Assert.AreEqual(routes["CA"], resultActual["CA"]);
+            Assert.AreEqual(routes["KS"], resultActual["KS"]);
         }
     }
 }
