@@ -7,9 +7,8 @@ namespace Exercise6_.Tests
     [TestClass]
     public class ArrayExtensionsTests
     {
-
         [TestMethod]
-        public void Length_InputArrLength10_10Expected()
+        public void CopyArray_InputArrLength10_10ExpectedCopiedArrayLength()
         {
             //Arrange
             int[] intArr = {1, 5, 47, 48, 58, 12, 14, 10, 1, 15};
@@ -24,43 +23,31 @@ namespace Exercise6_.Tests
         }
 
         [TestMethod]
-        public void LastItem_InputMinus7_Minus7Expected()
+        public void CopyArray_LastItemMinus7_Minus7Expected()
         {
             //Arrange
             int[] intArr = {1, 5, 47, 48, 58, 12, 14, 10, 1, 15};
             var expectedLastItem = -7;
 
             // Act
-            int[] copiedArray = ArrayExtensions.CopyArray(intArr);
-            var lastItem = 0;
-            foreach (var i in copiedArray)
-            {
-                lastItem = copiedArray[^1];
-            }
+            int lastItem = ArrayExtensions.CopyArray(intArr)[^1];
             
             // Assert
             Assert.AreEqual(expectedLastItem, lastItem);
         }
 
         [TestMethod]
-        public void AllItemsInRange1to100_True_TrueExpected()
+        public void CreateRandomArray_ArrayOf10Int_ArrayOf10IntExpected()
         {
             //Arrange
-            int[] newArray = ArrayExtensions.CreateRandomArray(10);
+            int[] intArr = { 1, 5, 47, 48, 58, 12, 14, 10, 1, 15 };
+            var expectedLength = intArr.Length;
 
             // Act
-            bool InRange(int min, int max, int[] arr)
-            {
-                foreach (var x in arr)
-                {
-                    if (x >= min && x <= max) 
-                        return true;
-                }
-                return false;
-            }
+            int actualLength = ArrayExtensions.CreateRandomArray(10).Length;
 
             // Assert
-            Assert.AreEqual(true, InRange(1, 100, newArray));
+            Assert.AreEqual(expectedLength, actualLength);
         }
     }
 }

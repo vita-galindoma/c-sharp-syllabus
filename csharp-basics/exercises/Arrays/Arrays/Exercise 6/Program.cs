@@ -9,7 +9,6 @@ namespace Exercise_6
             var randomArray = ArrayExtensions.CreateRandomArray(10);
             var copiedArray = ArrayExtensions.CopyArray(randomArray);
 
-
             Console.WriteLine(String.Join(" ", randomArray));
             Console.WriteLine(String.Join(" ", copiedArray));
 
