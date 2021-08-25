@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DragRace.Tests
@@ -67,7 +68,7 @@ namespace DragRace.Tests
         }
 
         [TestMethod]
-        public void UseNitrousOxideEngine_ExpectedStringWithSound()
+        public void ShowCurrentSpeed_WhenNitrousOxideEngineUsed_Expected7()
         {
             //Arrange
             _target = new Lexus("Lexus");
