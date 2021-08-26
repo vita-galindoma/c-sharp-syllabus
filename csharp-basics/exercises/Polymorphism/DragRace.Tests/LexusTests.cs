@@ -68,7 +68,7 @@ namespace DragRace.Tests
         }
 
         [TestMethod]
-        public void ShowCurrentSpeed_WhenNitrousOxideEngineUsed_Expected7()
+        public void ShowCurrentSpeed_NitrousOxideEngineUsed_Expected7()
         {
             //Arrange
             _target = new Lexus("Lexus");
