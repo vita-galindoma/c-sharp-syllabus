@@ -13,7 +13,7 @@ namespace FlightPlanner.Tests
         };
 
         [TestMethod]
-        public void GetListOfCities_HashsetExpected()
+        public void GetListOfCities_InputArrayOfRoutes_HashsetExpected()
         {
             //Arrange
             var inputTextUniqueCitiesCount = 6;
@@ -26,7 +26,7 @@ namespace FlightPlanner.Tests
         }
 
         [TestMethod]
-        public void GetListOfRoutes_TheSameValuesforTheKeyForBothDictionariesExpected()
+        public void GetListOfRoutes_InputArrayOfRoutes_TheSameValuesforTheKeyForBothDictionariesExpected()
         {
             //Arrange
             var routes = new Dictionary<string, string>()
