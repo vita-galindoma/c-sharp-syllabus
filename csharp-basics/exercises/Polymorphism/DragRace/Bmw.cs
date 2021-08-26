@@ -18,7 +18,7 @@ namespace DragRace
         }
 
         public void SlowDown() 
-        {
+        { 
             currentSpeed--;
         }
 
@@ -27,9 +27,9 @@ namespace DragRace
             return currentSpeed;
         }
 
-        public void StartEngine() 
+        public string StartEngine() 
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
 
         public string GetName()

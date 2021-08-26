@@ -13,24 +13,24 @@ namespace Phonebook
         {
             var directory = new PhoneDirectory();
             Console.WriteLine("Add entries to Phone Book:");
-            directory.AddNumber("Tom", "4628308605");
-            directory.AddNumber("Eric", "4628308608");
-            directory.AddNumber("Elisa", "4629458608");
-            directory.AddNumber("Elisa", "4629458608");
+            Console.WriteLine(directory.AddNumber("Tom", "4628308605"));
+            Console.WriteLine(directory.AddNumber("Eric", "4628308608"));
+            Console.WriteLine(directory.AddNumber("Elisa", "4629458608"));
+            Console.WriteLine(directory.AddNumber("Elisa", "4629458608"));
             Console.WriteLine();
             
             Console.WriteLine("Phone Book");
-            directory.GetAllPhoneBook();
+            Console.WriteLine(directory.ReturnAllPhoneBook());
             Console.WriteLine();
 
             Console.WriteLine("Find by Name:");
-            directory.FindByName("Tom");
-            directory.FindByName("Jacob");
+            Console.WriteLine(directory.FindByName("Tom"));
+            Console.WriteLine(directory.FindByName("Jacob"));
             Console.WriteLine();
             
             Console.WriteLine("Find by Number:");
-            directory.FindByNumber("4628308605");
-            directory.FindByNumber("25496451213");
+            Console.WriteLine(directory.FindByNumber("4628308605"));
+            Console.WriteLine(directory.FindByNumber("25496451213"));
 
             Console.ReadKey();
         }

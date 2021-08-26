@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    class Cat : Felime
+    public class Cat : Felime
     {
         private string _breed;
 
@@ -13,9 +13,9 @@ namespace Hierarchy
         {
             _breed = breed;
         }
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("meouuw");
+            return "meouuw";
         }
 
         public override string ReturnInfo()
@@ -24,10 +24,10 @@ namespace Hierarchy
             result += $", {_breed}";
             return result;
         }
-        public override void Eat(Food food)
+        public override string Eat(Food food)
         { 
             FoodEaten += food.Quantity;
-            Console.WriteLine($"{AnimalType}, [{AnimalName}, {_breed}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]");
+            return $"{AnimalType}, [{AnimalName}, {_breed}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]";
         }
 
     }

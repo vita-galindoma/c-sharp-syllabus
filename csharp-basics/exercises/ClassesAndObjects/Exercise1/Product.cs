@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise1
 {
-    class Product
+    public class Product
     {
         private string _name;
         private double _priceAtStart;
@@ -14,24 +14,38 @@ namespace Exercise1
 
         public Product(string name, double priceAtStart, int amountAtStart)
         {
-            this._name = name;
-            this._priceAtStart = priceAtStart;
-            this._amountAtStart = amountAtStart;
+            if (priceAtStart < 0 || amountAtStart < 0)
+            {
+                throw new ArgumentException("Price and amount should be positive");
+            }
+            _name = name;
+            _priceAtStart = priceAtStart;
+            _amountAtStart = amountAtStart;
         }
 
-        public void PrintProduct()
+        public string PrintProduct()
         {
-            Console.WriteLine($"{this._name}, price {this._priceAtStart: 0.00}, amount {this._amountAtStart}");
+            return $"{_name}, price {_priceAtStart:0.00}, amount {_amountAtStart}";
         }
 
-        public void AmountChanges(int newAmount)
+        public int AmountChanges(int newAmount)
         {
-            this._amountAtStart = newAmount;
+            if (newAmount < 0)
+            {
+                throw new ArgumentException("Amount should be positive");
+            }
+            _amountAtStart = newAmount;
+            return newAmount;
         }
 
-        public void PriceChanges(double newPrice)
+        public double PriceChanges(double newPrice)
         {
-            this._priceAtStart = newPrice;
+            if (newPrice < 0)
+            {
+                throw new ArgumentException("Price should be positive");
+            }
+            _priceAtStart = newPrice;
+            return newPrice;
         }
     }
 }

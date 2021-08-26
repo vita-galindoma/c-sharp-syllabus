@@ -8,52 +8,55 @@ namespace PhoneBook
     {
         SortedDictionary<string, string> phoneBook =
             new SortedDictionary<string, string>();
+        
 
-
-        public void AddNumber (string name, string number)
+        public string AddNumber (string name, string number)
         {
             try
             {
                 phoneBook.Add(name, number);
+                return "Added.";
             }
             catch (ArgumentException)
             {
-                Console.WriteLine($"An entry with name {name} already exists.");
+                return $"An entry with name {name} already exists.";
             }
         }
 
-        public void FindByName(string name)
+        public string FindByName(string name)
         {
             if (phoneBook.ContainsKey(name))
             {
-                Console.WriteLine($"name: {name}, number: {phoneBook[name]}.");
+                return $"name: {name}, number: {phoneBook[name]}.";
             }
             else
             {
-                Console.WriteLine($"{name} is not found.");
+                return $"{name} is not found.";
             }
         }
 
-        public void FindByNumber(string number)
+        public string FindByNumber(string number)
         {
             var key = phoneBook.Where(kvp => kvp.Value == number).Select(kvp => kvp.Key).FirstOrDefault();
             if (phoneBook.ContainsValue(number))
             {
-                Console.WriteLine($"This {number} belongs to {key}.");
+                return $"This {number} belongs to {key}.";
             }
             else
             { 
-                Console.WriteLine($"Number {number} is not found.");
+                return $"Number {number} is not found.";
             }
         }
 
-        public void GetAllPhoneBook()
+        public string ReturnAllPhoneBook()
         {
-            foreach (KeyValuePair<string, string> kvp in phoneBook)
+            string phoneBookEntries = String.Empty;
+            foreach (KeyValuePair<string, string> item in phoneBook)
             {
-                Console.WriteLine("Name: {0}, Number: {1}",
-                    kvp.Key, kvp.Value);
+                phoneBookEntries += $"Name: {item.Key}, Number: {item.Value}\n";
             }
+
+            return phoneBookEntries;
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Exercise5
             var date = new Date(10, 10, 2020);
             date.Year = 2021;
             date.Month = 8;
-            date.Day = 12;
+            date.Day = 31;
 
-            date.DisplayDate();
+            Console.WriteLine(date.DisplayDate());
             Console.ReadKey();
         }
     }

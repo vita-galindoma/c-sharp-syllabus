@@ -1,27 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise5
 {
-    class Date
+    public class Date
     {
-        public Date(int month, int day, int year)
-        {
-            Month = month;
-            Day = day;
-            Year = year;
-        }
-
-        public int Month  { get; set; }
         public int Day { get; set; }
+        public int Month { get; set; }
         public int Year { get; set; }
 
-        public void DisplayDate()
+        public Date(int day, int month, int year)
         {
-            Console.WriteLine($"{Month}/{Day}/{Year}");
+            if (month < 0 || month > 12 || year < 0 || day < 0)
+            {
+                throw new ArgumentException("Incorrect date format");
+            }
+            else if (month == 4 && day > 30 || month == 6 && day > 30 || month == 9 && day > 30 || month == 11 && day > 30)
+            {
+                throw new ArgumentException("Incorrect date format");
+            }
+            else if(month == 1 && day > 31 || month == 2 && day > 31 || month == 3 && day > 31 || month == 5 && day > 31 || month == 7 && day > 31 || month == 8 && day > 31 || month == 10 && day > 31 || month == 12 && day > 31)
+            {
+                throw new ArgumentException("Incorrect date format");
+            }
+            else
+            {
+                Day = day;
+                Month = month;
+                Year = year;
+            }
+        }
+        
+        public string DisplayDate()
+        {
+            return $"{Day}/{Month}/{Year}";
         }
     }
 }

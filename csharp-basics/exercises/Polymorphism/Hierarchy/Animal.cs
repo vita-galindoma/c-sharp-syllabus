@@ -3,7 +3,7 @@
 
 namespace Hierarchy
 {
-    abstract class Animal
+    public abstract class Animal
     {
         private string _animalName;
         private string _animalType;
@@ -41,8 +41,8 @@ namespace Hierarchy
             _foodEaten = foodEaten;
         }
 
-        public abstract void MakeSound();
-        public abstract void Eat(Food food);
+        public abstract string MakeSound();
+        public abstract string Eat(Food food);
 
         public virtual string ReturnInfo()
         {

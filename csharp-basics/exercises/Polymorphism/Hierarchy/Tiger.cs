@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    class Tiger : Felime
+    public class Tiger : Felime
     {
         
         public Tiger(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) :
@@ -12,22 +12,20 @@ namespace Hierarchy
         {
             
         }
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("rrrrr");
+            return "rrrrr";
         }
 
-        public override void Eat(Food food)
+        public override string Eat(Food food)
         {
             if (food is Meat)
             {
-                FoodEaten += food.Quantity;
+                FoodEaten = FoodEaten + food.Quantity;
+                return $"{AnimalType}, [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]";
             }
-            else
-            {
-                Console.WriteLine($"{AnimalType} are not eating that type of food!");
-            }
-            Console.WriteLine($"{AnimalType}, [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]");
+            return $"{AnimalType} are not eating that type of food!";
+
         }
 
         public override string ReturnInfo()
